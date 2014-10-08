@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -29,6 +29,26 @@ gem 'spring',        group: :development
 #bootstrap sass
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
+#ensure users can log in with their RIT accoutn
+gem 'devise'
+gem 'devise_ldap_authenticatable'
+
+group :development, :test do
+  gem 'better_errors', '1.0.1'
+  gem 'binding_of_caller', '0.7.2'
+  gem 'factory_girl_rails'
+  gem 'sqlite3'
+end
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+end
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
