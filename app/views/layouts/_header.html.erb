@@ -1,0 +1,33 @@
+<!-- Site header and navigation -->
+<header class="top" role="header">
+  <div class="container">
+    <a href="#" class="navbar-brand pull-left">
+      Wines of the World
+    </a>
+    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="glyphicon glyphicon-align-justify"></span>
+    </button>
+    <nav class="navbar-collapse collapse" role="navigation">
+      <ul class="navbar-nav nav pull-right">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <form class="form-inline" role="form">
+            <%= form_for(:user, :url => session_path(:user)) do |f| %>
+                <div class="form-group" style="padding: 20px 10px 0px 10px">
+                  <%= f.text_field :email, :placeholder => "email", :tabindex => 1, :class => "form-control" %>
+                </div>
+                <div class="form-group" style="padding: 20px 10px 0px 10px">
+                  <%= f.password_field :password, :placeholder => "Password", :tabindex => 2, :class => "form-control" %>
+                </div>
+                <div class="form-group" style="padding: 20px 0px 0px 10px">
+                  <%= f.submit 'Sign in', :tabindex => 3, :class => "form-control" %>
+                </div>
+            <% end %>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
