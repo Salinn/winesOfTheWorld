@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails winesOfTheWorld: development" uuid="6a58a8d8-2b86-426d-a899-ee9007b5f380">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails winesOfTheWorld: test" uuid="efba05fe-ce2c-489b-a09a-73f60fdea222">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
