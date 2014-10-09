@@ -1,0 +1,27 @@
+<h1>Listing wine_classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Meeting time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wine_classes.each do |wine_class| %>
+      <tr>
+        <td><%= wine_class.name %></td>
+        <td><%= wine_class.meeting_time %></td>
+        <td><%= link_to 'Show', wine_class %></td>
+        <td><%= link_to 'Edit', edit_wine_class_path(wine_class) %></td>
+        <td><%= link_to 'Destroy', wine_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wine class', new_wine_class_path %>

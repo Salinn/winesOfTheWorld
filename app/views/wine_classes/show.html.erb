@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wine_class.name %>
+</p>
+
+<p>
+  <strong>Meeting time:</strong>
+  <%= @wine_class.meeting_time %>
+</p>
+
+<%= link_to 'Edit', edit_wine_class_path(@wine_class) %> |
+<%= link_to 'Back', wine_classes_path %>
