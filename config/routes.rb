@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :weeks
+
   resources :wines
 
   devise_for :users

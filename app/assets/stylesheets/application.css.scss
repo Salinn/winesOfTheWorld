@@ -23,6 +23,15 @@ a {
   vertical-align: text-bottom;
 }
 
+a :hover{
+  color: #000000;
+  background-color: none;
+}
+
+a:visited{
+  color: #000000;
+}
+
 .navbar-brand{
   font-size: 3rem;
 }
@@ -43,6 +52,11 @@ a {
 }
 .navbar-brand {
   color: black;
+  background-color: none;
+}
+.navbar-brand :hover{
+  color: black;
+  background-color: none;
 }
 
 #push, #footer {
