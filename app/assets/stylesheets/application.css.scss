@@ -21,6 +21,7 @@ a {
   color: black;
   font-size: 2rem;
   vertical-align: text-bottom;
+  background-color: none;
 }
 
 a :hover{
@@ -81,4 +82,8 @@ body {
 
 #redwine {
   background:url(http://www.rcws-photo.com/wp-content/uploads/2011/06/Fotolia_28158439_M.jpg)
+}
+
+.top-links a:hover{
+  background-color: transparent !important;
 }
