@@ -14,5 +14,39 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets"
-@import "bootstrap"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+a {
+  color: black;
+  font-size: 2rem;
+  vertical-align: text-bottom;
+}
+
+.navbar-brand{
+  font-size: 3rem;
+}
+
+.top{
+  background-color: #B45FB4;
+  font-family: Lucida Sans Unicod;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.navbar-brand {
+  color: black;
+}
+
+.card {
+  padding:1.5rem;
+  box-shadow:0 10px 14px rgba(10,10,10,.6);
+  background:white;
+  border-radius:3px;
+  user-select:none;
+  animation:fly-in-from-left .5s 1s ease both;
+  transform-origin:top left;
+  width: 80%;
+  margin: 0 auto;
+}
