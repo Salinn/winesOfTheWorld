@@ -35,8 +35,18 @@ a {
   text-align: center;
   vertical-align: middle;
 }
+
+.bottom{
+  background-color: #B45FB4;
+  font-family: Lucida Sans Unicod;
+  margin-top: 11%;
+}
 .navbar-brand {
   color: black;
+}
+
+#push, #footer {
+  height: 60px;
 }
 
 .card {

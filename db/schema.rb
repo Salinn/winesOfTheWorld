@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141008145720) do
+ActiveRecord::Schema.define(version: 20141009130449) do
 
   create_table "users", force: true do |t|
     t.string   "login",               default: "", null: false
@@ -26,5 +26,17 @@ ActiveRecord::Schema.define(version: 20141008145720) do
   end
 
   add_index "users", ["login"], name: "index_users_on_login", unique: true
+
+  create_table "wines", force: true do |t|
+    t.string   "producer"
+    t.string   "grape"
+    t.string   "country"
+    t.string   "region"
+    t.string   "vintage"
+    t.string   "price"
+    t.string   "alcohol_percentage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -1,3 +1,4 @@
+<div class="card">
 <%= form_for(@wine) do |f| %>
   <% if @wine.errors.any? %>
     <div id="error_explanation">
@@ -10,36 +11,46 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :producer %><br>
-    <%= f.text_field :producer %>
+  <div>
+    <div class="field" style="float: left; width: 50%">
+      <%= f.label :producer %><br>
+      <%= f.text_field :producer %>
+    </div>
+    <div class="field"style="float: right; width: 50%">
+      <%= f.label :grape %><br>
+      <%= f.text_field :grape %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :grape %><br>
-    <%= f.text_field :grape %>
+  <div>
+    <div class="field" style="float: left; width: 50%">
+      <%= f.label :country %><br>
+      <%= f.text_field :country %>
+    </div>
+    <div class="field" style="float: right; width: 50%">
+      <%= f.label :region %><br>
+      <%= f.text_field :region %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
+  <div>
+    <div class="field" style="float: left; width: 50%">
+      <%= f.label :vintage %><br>
+      <%= f.text_field :vintage %>
+    </div>
+    <div class="field" style="float: right; width: 50%">
+      <%= f.label :price %><br>
+      <%= f.text_field :price %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :region %><br>
-    <%= f.text_field :region %>
+  <div>
+    <div class="field" style="float: left; width: 50%">
+      <%= f.label :alcohol_percentage %><br>
+      <%= f.text_field :alcohol_percentage %>
+    </div>
+    <div class="actions" style="float: right; width: 50%">
+      <br>
+      <%= f.submit %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :vintage %><br>
-    <%= f.text_field :vintage %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :alcohol_percentage %><br>
-    <%= f.text_field :alcohol_percentage %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div style="float: none; clear:both;"> </div>
 <% end %>
+</div>
