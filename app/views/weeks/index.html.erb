@@ -1,89 +1,89 @@
 <h1>Week</h1>
-<div style="float: left; overflow: auto;">
-<h2><%= will_paginate @weeks%></h2>
-</div>
+<h2 style="margin: 0 auto; float: left"><%= will_paginate @weeks%></h2>
+
+<div style="clear: both"></div>
 <div class="card">
-    <% @weeks.each do |week| %>
-      <h1>Week <%= week.week_number %></h1>
-      <% week.wine.each do |wines| %>
-          <div style="width: 50%">
-          <div style="float: left">
-          <h3>Wine Producer: <b><%= wines.producer %></b></h3>
-            </div>
-            <div style="float: right">
-          <h3>Grape(s): <b><%= wines.grape %></b></h3></div>
-          <div style="clear: both"></div>
-          <div style="float: left">
-          <h3>Country: <b><%= wines.country %></b></h3></div>
-          <div style="float: right">
-          <h3>Regison: <b><%= wines.region %></b></h3>
-            </div>
-          <div style="clear: both"></div>
-          <div style="float: left">
-          <h3>Year: <b><%= wines.vintage %></b></h3></div>
-          <div style="float: right">
-          <h3>Price: <b><%= wines.price %></b></h3>
-            </div>
-          <div style="clear: both"></div>
-          <div style="float: left">
-          <h3>Alcohol %: <b><%= wines.alcohol_percentage %></b></h3>
-          </div>
-          </div>
-      <div style="clear: both"></div>
-          <% @comments.each do |comment| %>
-              <% if comment.wine_id == wines.id and comment.user_id ==current_user.id %>
-              <% @comment = comment %>
-              <% end %>
-              <% end %>
-          <% @comment = Comment.new if @comment.nil? %>
-      <%= form_for(@comment) do |f| %>
-          <div style="float: left">
-            <%= f.hidden_field :wine_id, :value => wines.id %>
-          </div>
-              <div style="float: left">
-            <%= f.hidden_field :user_id, value: current_user.id %>
-          </div>
-              <div style="float: left">
-            <%= f.label :see %><br>
-            <%= f.text_area :see %>
-          </div>
-              <div style="float: left">
-            <%= f.label :smell %><br>
-            <%= f.text_area :smell %>
-          </div>
-              <div style="float: left">
-            <%= f.label :swirl %><br>
-            <%= f.text_area :swirl %>
-          </div>
-              <div style="float: left">
-            <%= f.label :sip %><br>
-            <%= f.text_area :sip %>
-          </div>
-              <div style="float: left">
-            <%= f.label :swallow %><br>
-            <%= f.text_area :swallow %>
-          </div>
-              <div style="float: left">
-            <%= f.label :savor %><br>
-            <%= f.text_area :savor %>
-          </div>
-              <div style="float: left">
-            <%= f.submit %>
-          </div>
+  <% @weeks.each do |week| %>
+      <% week.wine.each do |wine| %>
 
-              <div style="clear: both"></div>
-              <br>
-              <hr style=" display: block; height: 1px;
-                      border: 0; border-top: 1px solid #ccc;
-                      margin: 1em 0; padding: 0; ">
-              <br>
-          <% end %>
-          <% @comment = nil %>
+          <!--<h1>Week <%= week.week_number %></h1>-->
+  <div style="width: 50%">
+    <div style="float: left">
+      <h3>Wine Producer: <b><%= wine.producer %></b></h3>
+    </div>
+    <div style="float: right">
+      <h3>Grape(s): <b><%= wine.grape %></b></h3>
+    </div>
+    <div style="clear: both"></div>
+    <div style="float: left">
+      <h3>Country: <b><%= wine.country %></b></h3></div>
+    <div style="float: right">
+      <h3>Regison: <b><%= wine.region %></b></h3>
+    </div>
+    <div style="clear: both"></div>
+    <div style="float: left">
+      <h3>Year: <b><%= wine.vintage %></b></h3></div>
+    <div style="float: right">
+      <h3>Price: <b><%= wine.price %></b></h3>
+    </div>
+    <div style="clear: both"></div>
+    <div style="float: left">
+      <h3>Alcohol %: <b><%= wine.alcohol_percentage %></b></h3>
+    </div>
+  </div>
+  <div style="clear: both"></div>
+  <div style="clear: both"></div>
+  <% @comments.each do |comment| %>
+      <% if comment.wine_id == wine.id and comment.user_id ==current_user.id %>
+          <% @comment = comment %>
       <% end %>
-      <div style="clear: both"></div>
-    <% end %>
-</div>
+  <% end %>
+  <% @comment = Comment.new if @comment.nil? %>
+  <%= form_for(@comment) do |f| %>
+      <div style="float: left">
+        <%= f.hidden_field :wine_id, :value => wine.id %>
+      </div>
+      <div style="float: left">
+        <%= f.hidden_field :user_id, value: current_user.id %>
+      </div>
+      <div style="float: left">
+        <%= f.label :see %><br>
+        <%= f.text_area :see %>
+      </div>
+      <div style="float: left">
+        <%= f.label :smell %><br>
+        <%= f.text_area :smell %>
+      </div>
+      <div style="float: left">
+        <%= f.label :swirl %><br>
+        <%= f.text_area :swirl %>
+      </div>
+      <div style="float: left">
+        <%= f.label :sip %><br>
+        <%= f.text_area :sip %>
+      </div>
+      <div style="float: left">
+        <%= f.label :swallow %><br>
+        <%= f.text_area :swallow %>
+      </div>
+      <div style="float: left">
+        <%= f.label :savor %><br>
+        <%= f.text_area :savor %>
+      </div>
+      <div style="float: left">
+        <%= f.submit %>
+      </div>
 
-<br>
+      <div style="clear: both"></div>
+      <br>
+      <hr style=" display: block; height: 1px;
+              border: 0; border-top: 1px solid #ccc;
+              margin: 1em 0; padding: 0; ">
+      <br>
+  <% end %>
+  <% @comment = nil %>
+          <% end %>
+  <% end %>
+</div>
 
 <!--<%= link_to 'New Week', new_week_path %>-->
