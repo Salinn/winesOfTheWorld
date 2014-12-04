@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009155552) do
+ActiveRecord::Schema.define(version: 20141204211443) do
+
+  create_table "comments", force: true do |t|
+    t.integer  "wine_id"
+    t.integer  "user_id"
+    t.text     "see"
+    t.text     "smell"
+    t.text     "swirl"
+    t.text     "sip"
+    t.text     "swallow"
+    t.text     "savor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "login",               default: "", null: false
@@ -52,6 +65,7 @@ ActiveRecord::Schema.define(version: 20141009155552) do
     t.string   "alcohol_percentage"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "week_id"
   end
 
 end

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Wine:</strong>
+  <%= @comment.wine_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @comment.user_id %>
+</p>
+
+<p>
+  <strong>See:</strong>
+  <%= @comment.see %>
+</p>
+
+<p>
+  <strong>Smell:</strong>
+  <%= @comment.smell %>
+</p>
+
+<p>
+  <strong>Swirl:</strong>
+  <%= @comment.swirl %>
+</p>
+
+<p>
+  <strong>Sip:</strong>
+  <%= @comment.sip %>
+</p>
+
+<p>
+  <strong>Swallow:</strong>
+  <%= @comment.swallow %>
+</p>
+
+<p>
+  <strong>Savor:</strong>
+  <%= @comment.savor %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

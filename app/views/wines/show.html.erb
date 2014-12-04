@@ -1,39 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Producer:</strong>
-  <%= @wine.producer %>
-</p>
-
-<p>
-  <strong>Grape:</strong>
-  <%= @wine.grape %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @wine.country %>
-</p>
-
-<p>
-  <strong>Region:</strong>
-  <%= @wine.region %>
-</p>
-
-<p>
-  <strong>Vintage:</strong>
-  <%= @wine.vintage %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @wine.price %>
-</p>
-
-<p>
-  <strong>Alcohol percentage:</strong>
-  <%= @wine.alcohol_percentage %>
-</p>
+<div class="card">
+          <div style="width: 50%">
+            <div style="float: left">
+              <h3>Wine Producer: <b><%= @wine.producer %></b></h3>
+            </div>
+            <div style="float: right">
+              <h3>Grape(s): <b><%= @wine.grape %></b></h3>
+            </div>
+            <div style="clear: both"></div>
+            <div style="float: left">
+              <h3>Country: <b><%= @wine.country %></b></h3></div>
+            <div style="float: right">
+              <h3>Regison: <b><%= @wine.region %></b></h3>
+            </div>
+            <div style="clear: both"></div>
+            <div style="float: left">
+              <h3>Year: <b><%= @wine.vintage %></b></h3></div>
+            <div style="float: right">
+              <h3>Price: <b><%= @wine.price %></b></h3>
+            </div>
+            <div style="clear: both"></div>
+            <div style="float: left">
+              <h3>Alcohol %: <b><%= @wine.alcohol_percentage %></b></h3>
+            </div>
+          </div>
+          <div style="clear: both"></div>
+          </div>
 
 <%= link_to 'Edit', edit_wine_path(@wine) %> |
 <%= link_to 'Back', wines_path %>

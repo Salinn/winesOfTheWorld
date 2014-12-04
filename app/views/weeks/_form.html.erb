@@ -1,29 +1,23 @@
-<%= form_for(@week) do |f| %>
-  <% if @week.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@week.errors.count, "error") %> prohibited this week from being saved:</h2>
+<div class="card">
+  <%= form_for(@week) do |f| %>
+    <% if @week.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@week.errors.count, "error") %> prohibited this week from being saved:</h2>
 
-      <ul>
-      <% @week.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @week.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field" align="center">
+      <%= f.label :week_number %><br>
+      <%= f.number_field :week_number %>
+    </div>
+    <div class="actions" align="center">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :week_number %><br>
-    <%= f.number_field :week_number %>
-  </div>
-  <div class="field">
-    <%= f.label :class_id %><br>
-    <%= f.number_field :class_id %>
-  </div>
-  <div class="field">
-    <%= f.label :wine_id %><br>
-    <%= f.number_field :wine_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

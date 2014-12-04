@@ -30,6 +30,8 @@ gem 'autoprefixer-rails'
 #ensure users can log in with their RIT accoutn
 gem 'devise'
 gem 'devise_ldap_authenticatable'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 group :development, :test do
   gem 'better_errors', '1.0.1'

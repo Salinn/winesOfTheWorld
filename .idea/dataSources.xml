@@ -4,15 +4,14 @@
     <data-source source="LOCAL" name="Rails winesOfTheWorld: development" uuid="6a58a8d8-2b86-426d-a899-ee9007b5f380">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:db/development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails winesOfTheWorld: test" uuid="efba05fe-ce2c-489b-a09a-73f60fdea222">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:db/test.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>
 </project>
-

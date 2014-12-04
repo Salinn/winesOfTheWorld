@@ -1,7 +1,7 @@
 <!-- Site header and navigation -->
 <header class="top" role="header">
   <div class="container">
-    <a href="#" class="navbar-brand pull-left">
+    <a href="/" class="navbar-brand pull-left">
       <img style="width: auto" height="150%" src="http://3.bp.blogspot.com/-2lFCgSlo-ck/T5KWu64r6uI/AAAAAAAAEgY/7VqeaMcOkwg/s1600/wine+glass.PNG">
       Wines of the World
     </a>
@@ -29,8 +29,8 @@
             <% end %>
           </div>
         <% else %>
-            <li><%= link_to "Wines", wine_classes_path, :method => :delete, class: "nav-item" %></li>
-            <li><%= link_to "Week", weeks_path, :method => :delete, class: "nav-item" %></li>
+            <li><%= link_to "Wines", wines_path, class: "nav-item" %></li>
+            <li><%= link_to "Weeks", weeks_path, class: "nav-item" %></li>
             <li><%= link_to "Sign-out", destroy_user_session_path, :method => :delete, class: "nav-item" %></li>
         <% end %>
         </li>

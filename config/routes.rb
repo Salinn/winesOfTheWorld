@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :comments
+
   resources :wine_classes
 
   resources :weeks

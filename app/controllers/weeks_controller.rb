@@ -1,8 +1,10 @@
 class WeeksController < ApplicationController
   before_action :set_week, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
 
   def index
-    @weeks = Week.all
+    @weeks = Week.all.page(params[:page]).per_page(1)
+    @comments = Comment.all
     respond_with(@weeks)
   end
 

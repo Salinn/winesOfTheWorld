@@ -1,0 +1,49 @@
+<%= form_for(@comment) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :wine_id %><br>
+    <%= f.number_field :wine_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :see %><br>
+    <%= f.text_area :see %>
+  </div>
+  <div class="field">
+    <%= f.label :smell %><br>
+    <%= f.text_area :smell %>
+  </div>
+  <div class="field">
+    <%= f.label :swirl %><br>
+    <%= f.text_area :swirl %>
+  </div>
+  <div class="field">
+    <%= f.label :sip %><br>
+    <%= f.text_area :sip %>
+  </div>
+  <div class="field">
+    <%= f.label :swallow %><br>
+    <%= f.text_area :swallow %>
+  </div>
+  <div class="field">
+    <%= f.label :savor %><br>
+    <%= f.text_area :savor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
