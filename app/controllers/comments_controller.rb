@@ -22,12 +22,12 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     flash[:notice] = 'Comment was successfully created.' if @comment.save
-    respond_with(@comment)
+    redirect_to request.referrer
   end
 
   def update
     flash[:notice] = 'Comment was successfully updated.' if @comment.update(comment_params)
-    respond_with(@comment)
+    redirect_to request.referrer
   end
 
   def destroy
